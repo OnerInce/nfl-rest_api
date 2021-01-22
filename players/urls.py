@@ -7,5 +7,7 @@ router.register(r'players',  views.PlayerView, basename='players')
 router.register(r'teams',  views.TeamView, basename='teams')
 
 urlpatterns = [
+    path('', views.WelcomeView),
+    path('api', views.APIWelcomeView),
     path('api/', include((router.urls, 'app_name'))),
 ]

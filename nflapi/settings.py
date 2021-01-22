@@ -26,7 +26,7 @@ SECRET_KEY = '(@67x0s_*papezek&_(gy2rvrywa!t2$+hqvb6l%lf#z&57*t='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nflrestapi.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["nflrestapi.herokuapp.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
