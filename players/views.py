@@ -31,7 +31,7 @@ class PlayerView(viewsets.ReadOnlyModelViewSet):
             season = self.request.query_params.get('season')
             team = self.request.query_params.get('team').upper()
             team_idd = Team.objects.get(name=team).id
-            queryset = queryset.filter(season=season, playerTeam=team_idd)
+            queryset = queryset.filter(season=season, team_name=team_idd)
 
         return queryset
 
