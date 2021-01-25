@@ -7,12 +7,15 @@ Assuming Docker is already installed in the system, build and create Postgres da
 docker-compose up db
 ```
 
-While db instance is running, open a new terminal tab. 
-To fill the database with information, use pg_restore:
+In a new terminal tab, migrate Django models to database:
 
 ```
-docker cp latest.dump bbm479-nfl-api-1_db_1:/var/lib/postgresql/data
-docker exec -i bbm479-nfl-api-1_db_1 pg_restore -U postgres -d nfldb < latest.dump
+docker-compose run web python manage.py migrate
+```
+
+After tables and fields are created, fill the database with "nfl-db_insert.sql" file. This can be done from terminal or Dbeaver (or similar) database client. Connect to db and execute .sql file:
+```
+jdbc:postgresql://localhost:6543/nfldb
 ```
 
 Finally, build and run all containers:
