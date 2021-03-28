@@ -5,19 +5,11 @@ from rest_framework.response import Response
 from .models import Player, Team
 from .serializers import PlayerSerializer, TeamSerializer
 
-def WelcomeView(request):
-
-    message = "<body>Welcome to the Nfl Rest API. Use API with /api</body>"
-
-    return HttpResponse(message)
-
 
 def APIWelcomeView(request):
 
     message = "<body>Use with /teams or /players</body>"
-
     return HttpResponse(message)
-
 
 class PlayerView(viewsets.ReadOnlyModelViewSet):
 
