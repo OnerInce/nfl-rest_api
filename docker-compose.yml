@@ -10,10 +10,20 @@ services:
       - "8000:8000"
 
   db:
+<<<<<<< HEAD
     build: db
     restart: always
     env_file: 
       - db/db.env
+=======
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nfldb
+      POSTGRES_HOST_AUTH_METHOD: trust
+>>>>>>> 82f0978e7a51e1dd07885c90c52479029e82ac06
     ports:
       - "6543:5432"
     volumes:
