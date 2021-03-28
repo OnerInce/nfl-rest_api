@@ -2,5 +2,9 @@
 .git
 .gitignore
 Dockerfile
+__pycache__/
+**/migrations
+/migrations
+Procfile
 README.md
 docker-compose.yml
