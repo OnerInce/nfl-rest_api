@@ -3,28 +3,21 @@ version: '3'
 services:
   web:
     build: .
-    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - 8000:8000
 
   db:
-    build: db
-    restart: always
-    env_file: 
-      - db/db.env
     image: postgres
-    restart: always
     environment: 
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: nfldb
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
-      - "6543:5432"
+      - 5432:5432
     volumes:
-      - nfl-data:/var/lib/postgresql/data/
-
-volumes:
-  nfl-data:
+      - ./docker/postgresql/data:/var/lib/postgresql/data/
+  
