@@ -4,7 +4,7 @@ DATABASES = {
         'NAME': 'nfldb',
         'USER': 'postgres',
         'PASSWORD' : "password",
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }

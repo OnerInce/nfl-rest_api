@@ -48,7 +48,10 @@ class Player(models.Model):
     def __str__(self):
         return self.display_name
 
+class Rusher_Avg(models.Model):
 
-
-
+    id = models.AutoField(primary_key=True)
+    nfl_id = models.IntegerField()
+    avg_speed = models.FloatField()
+    avg_acc = models.FloatField()
 

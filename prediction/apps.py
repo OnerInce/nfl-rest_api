@@ -1,12 +1,15 @@
 from django.apps import AppConfig
-import pandas as pd
 from joblib import load
 import os
+import json
 
 class PredictionConfig(AppConfig):
     name = 'prediction'
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     MLMODEL_FOLDER = os.path.join(BASE_DIR, 'prediction/')
-    MLMODEL_FILE = os.path.join(MLMODEL_FOLDER, "NFLPrediction.joblib")
-    mlmodel = load(MLMODEL_FILE)
-    
+    MLMODEL_FILE = os.path.join(MLMODEL_FOLDER, "main_model.joblib")
+    ml_model = load(MLMODEL_FILE)
+
+    WHEATHER_MODEL_FILE = os.path.join(MLMODEL_FOLDER, "weather_model.joblib")
+    weather_model = load(WHEATHER_MODEL_FILE)
+

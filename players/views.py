@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 from rest_framework import viewsets
 from rest_framework.response import Response
 from .models import Player, Team
@@ -8,8 +8,7 @@ from .serializers import PlayerSerializer, TeamSerializer
 
 def APIWelcomeView(request):
 
-    message = "<body>Use with /teams or /players</body>"
-    return HttpResponse(message)
+    return JsonResponse({'result':'error', 'message':'Use with /api/teams or /api/players'}, status=404)
 
 class PlayerView(viewsets.ReadOnlyModelViewSet):
 

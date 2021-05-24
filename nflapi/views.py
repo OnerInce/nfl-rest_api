@@ -1,6 +1,5 @@
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 def WelcomeView(request):
 
-    message = "<body>Welcome to the Nfl Rest API</body>"
-    return HttpResponse(message)
+    return JsonResponse({'result':'success', 'message':'Welcome to the NFL Rest API'})
