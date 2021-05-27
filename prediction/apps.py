@@ -7,7 +7,7 @@ class PredictionConfig(AppConfig):
     name = 'prediction'
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     MLMODEL_FOLDER = os.path.join(BASE_DIR, 'prediction/')
-    MLMODEL_FILE = os.path.join(MLMODEL_FOLDER, "main_model.joblib")
+    MLMODEL_FILE = os.path.join(MLMODEL_FOLDER, "model-3.joblib")
     ml_model = load(MLMODEL_FILE)
     sample_json_dict = {}
 
