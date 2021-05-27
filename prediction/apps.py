@@ -14,6 +14,6 @@ class PredictionConfig(AppConfig):
     WHEATHER_MODEL_FILE = os.path.join(MLMODEL_FOLDER, "weather_model.joblib")
     weather_model = load(WHEATHER_MODEL_FILE)
 
-    with open('sample.json') as f:
-        sample_json_dict = json.load(f)
+    """with open('sample.json') as f:
+        sample_json_dict = json.load(f)"""
 

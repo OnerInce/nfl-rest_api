@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from prediction.apps import PredictionConfig, sample_json_dict
+from prediction.apps import PredictionConfig
 from django.http import JsonResponse
 from players.models import Rusher_Avg
 import pandas as pd
@@ -30,7 +30,7 @@ class NFL_Model_Predict(APIView):
         values = []
         rusher_id, temperature, wind_speed = -1, -1, -1
 
-        for key in sample_json_dict:
+        for key in data:
             if key == "Temperature":
                 temperature = data[key]
                 continue
