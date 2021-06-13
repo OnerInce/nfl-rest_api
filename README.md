@@ -1,6 +1,31 @@
-# NFL Players REST API
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg" alt="nfl logo"></a>
+</p>
+
+# NFL Players and Prediction REST API
+
+RESTful API implementation for BBM479 - Hacettepe University CS Undergraduate Term Project Course. 
+
+## 🎥 Demo / Working <a name = "demo"></a>
+Deployed API on Heroku: https://nflrestapi.herokuapp.com/
+
+Complete Web Service: http://runitagain.tech/
+
+## API
+
+#### /api/teams
+* `GET` : Get all teams
+
+#### /api/players/:season/:team
+* `GET` : Get all players from :team who are played in :season
+
+#### /predict
+* `POST` : Get prediction result from learning model
 
 ## Usage
+🐋
+
 Assuming Docker is already installed in the system, build and create Postgres database :
 
 ```
