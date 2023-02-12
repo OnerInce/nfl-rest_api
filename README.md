@@ -9,11 +9,6 @@ RESTful API implementation for BBM479 - Hacettepe University CS Undergraduate Te
 
 Data source of API: https://www.kaggle.com/c/nfl-big-data-bowl-2020/data
 
-## 🎥 Demo / Working <a name = "demo"></a>
-Deployed API on Heroku: https://nflrestapi.herokuapp.com/
-
-Complete Web Service: https://nfl-react.herokuapp.com/
-
 ## API
 
 #### /api/teams
